@@ -1,0 +1,9 @@
+flask
+flask_restplus
+flask-sqlalchemy
+SQLAlchemy
+Werkzeug==0.16.0
+requests
+psycopg2
+flask-api
+flask-cors
