@@ -31,7 +31,7 @@ Configurar em sua máquina:
 - Testes positivos com swagger;
 - Persistência de dados no Postgres;
 
-![Alt Text](https://gph.is/g/4oXw5vL)
+![Alt Text](https://media.giphy.com/media/RmkIow42rkEh1aHm85/giphy.gif)
 
 ## ⚙️ Known Issues
 
