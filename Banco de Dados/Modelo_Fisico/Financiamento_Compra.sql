@@ -1,0 +1,11 @@
+CREATE TABLE public.FINANCIAMENTO_COMPRA (ID_FINANCIAMENTO serial PRIMARY KEY, 
+								  		  ID_CLIENTE int NOT NULL,
+							              FOREIGN KEY (ID_CLIENTE) REFERENCES public.CLIENTE (ID_CLIENTE),
+										  ID_BANCOS int NOT NULL,
+							              FOREIGN KEY (ID_BANCOS) REFERENCES public.BANCOS (ID_BANCOS),
+										  ENTRADA numeric,
+										  NUM_PARCELAS int);
+										 
+select * from public.FINANCIAMENTO_COMPRA 
+
+-- DROP TABLE PUBLIC.FINANCIAMENTO_COMPRA

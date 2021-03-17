@@ -31,6 +31,8 @@ from .classes.Immobile import immobile
 
 from .models.models import modelOwner, modelAdressImmobile, modelAdressClient, modelBanco, modelFinancing, modelSeller, modelClient, modelPayment, modelPaymentType, modelImmobileType, modelImmobile
 
+db.create_all()
+
 @name_space.route('/owners')
 class gpOwners(Resource):
     
