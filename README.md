@@ -30,7 +30,7 @@ Configurar em sua máquina:
 - Tabelas completamentamente listadas no Front-End;
 - Testes positivos com swagger;
 
-![Alt Text](https://drive.google.com/file/d/19muCELFDarPv084JnkJwXohFkC7g_6nO/view?usp=sharing)
+![Alt Text](https://i.imgur.com/e1qQ7XH.mp4)
 
 ## ⚙️ Known Issues
 
