@@ -1,1 +1,31 @@
-<p>compra works!</p>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+<div class="container" style="width:100vw">
+    <div class="d-flex flex-row mb-3">
+        <div class="p-2"><button type="button" class="btn btn-primary" href="#">HOME</button></div>
+        <div class="p-2"><button type="button" class="btn btn-primary" routerLink="/compracadastro">NOVO</button></div>
+    </div>  
+    
+    <table class="table">
+            <thead>
+                  <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Vendedor</th>
+                        <th scope="col">Cliente</th>
+                        <th scope="col">Valor</th>
+                        <th scope="col">Forma de Pagamento</th>
+                  </tr>                  
+            </thead>
+            <tbody>
+                  <tr *ngFor="let compra of compras">
+                        <th scope="row">{{ compra.id_compra }}</th>
+                        <td scope="row">{{ compra.id_vendedor }}</td>
+                        <td scope="row">{{ compra.id_cli }}</td>
+                        <td scope="row">{{ compra.valor_compra }}</td>
+                        <td scope="row">{{ compra.id_tipo_compra }}</td>
+                  </tr>             
+            </tbody> 
+      </table>
+</div>
+

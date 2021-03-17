@@ -1,1 +1,27 @@
-<p>compratipocadastro works!</p>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+<div class="container" style="width:100vw">
+    <h2 class="text-center display-3">Cadastrar Novo Tipo de Compra</h2>
+
+    <div class="row">
+        <div class="col">
+            <label class="form-label">ID Tipo Compra</label>
+            <input class="form-control" #id_tipo_compra type="text" id="idbanco" value="" name="nome"/>
+        </div>
+        <div class="col">
+            <label class="form-label">À Vista?</label>
+            <input class="form-control" #vista type="text" id="nomebanco" value="" name="nome"/> 
+        </div>
+        <div class="col">
+            <label class="form-label">Financiamento: </label>
+            <input class="form-control" #id_financiamento type="text" id="nomebanco" value="" name="nome"/> 
+        </div>
+    </div> 
+    <div class="d-flex flex-row mt-2">
+        <input class="btn btn-primary m-2" type="button" (click)="insereNovoTipoCompra(id_tipo_compra.value, vista.value, id_financiamento.value)" value="Inserir">
+        <input class="btn btn-primary m-2" type="button" routerLink="/paymentType" value="Voltar">
+    </div>   
+</div>
+
+ 

@@ -1,1 +1,33 @@
-<p>compracadastro works!</p>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+<div class="container" style="width:100vw">
+    <h2 class="text-center display-3">Cadastrar Nova Compra</h2>
+
+    <div class="row">
+        <div>
+            <label class="form-label">ID Compra</label>
+            <input class="form-control" #id_compra type="text" id="idbanco" value=""/>
+        </div>
+        <div>
+            <label class="form-label">Vendedor</label>
+            <input class="form-control" #id_vendedor type="text" id="nomebanco" value="" name="nome"/> 
+        </div>
+        <div>
+            <label class="form-label">Cliente</label>
+            <input class="form-control" #id_cli type="text" id="nomebanco" value="" name="nome"/> 
+        </div>
+        <div>
+            <label class="form-label">Valor da Compra</label>
+            <input class="form-control" #valor_compra type="text" id="nomebanco" value="" name="nome"/> 
+        </div>
+        <div>
+            <label class="form-label">Tipo da Compra</label>
+            <input class="form-control" #id_tipo_compra type="text" id="nomebanco" value="" name="nome"/> 
+        </div>
+    </div> 
+    <div class="d-flex flex-row mt-2">
+        <input class="btn btn-primary m-2" type="button" (click)="insereNovaCompra(id_compra.value, id_vendedor.value, id_cli.value, valor_compra.value, id_tipo_compra.value)" value="Inserir">
+        <input class="btn btn-primary m-2" type="button" routerLink="/payment" value="Voltar">
+    </div>   
+</div>
+

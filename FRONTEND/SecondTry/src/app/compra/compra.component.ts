@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-compra',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./compra.component.scss']
 })
 export class CompraComponent implements OnInit {
+  compras:any;
 
-  constructor() { }
+  constructor(private apiService: ApiService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.apiService.getPayment().subscribe((data)=>{
+      console.log(data);
+      this.compras = data;
+      console.log(this.compras[0])
+    })
   }
+  
 
 }
