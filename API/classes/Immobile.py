@@ -1,10 +1,10 @@
-from app import db
+from ..app import db
 from sqlalchemy import ForeignKey
-from AddressImmobile import adress_immobile
-from Owner import owner
-from Seller import seller
-from ImmobileType import immobile_type
-from Payment import payment
+from .AddressImmobile import adress_immobile
+from .Owner import owner
+from .Seller import seller
+from .ImmobileType import immobile_type
+from .Payment import payment
 
 class immobile(db.Model):
     __tablename__ = 'imovel'

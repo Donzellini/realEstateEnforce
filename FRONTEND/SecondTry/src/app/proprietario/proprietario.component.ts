@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-proprietario',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./proprietario.component.scss']
 })
 export class ProprietarioComponent implements OnInit {
+  proprietarios:any;
 
-  constructor() { }
+  constructor(private apiService: ApiService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.apiService.getOwners().subscribe((data)=>{
+      console.log(data);
+      this.proprietarios = data;
+      console.log(this.proprietarios[0])
+    })
   }
+  
 
 }

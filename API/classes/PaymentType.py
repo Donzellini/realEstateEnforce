@@ -1,6 +1,6 @@
-from app import db
+from ..app import db
 from sqlalchemy import ForeignKey
-from Financing import finance
+from .Financing import finance
 
 class payment_type(db.Model):
     __tablename__ = 'tipo_compra'

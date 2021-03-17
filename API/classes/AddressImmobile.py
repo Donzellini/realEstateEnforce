@@ -1,4 +1,4 @@
-from app import db
+from ..app import db
 from sqlalchemy import ForeignKey
 
 class adress_immobile(db.Model):

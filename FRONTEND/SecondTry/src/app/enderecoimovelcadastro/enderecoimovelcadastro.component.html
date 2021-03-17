@@ -1,1 +1,48 @@
-<p>enderecoimovelcadastro works!</p>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+<div class="container" style="width:100vw">
+    <h2 class="text-center display-3">Cadastrar Novo Endereço de Imóvel</h2>
+
+    <div class="row">
+        <div>
+            <label class="form-label">ID Endereço do Imóvel</label>
+            <input class="form-control" #id_endereco_imov type="text" id="id_endereco_imov" value="" name="nome"/>
+        </div>
+        <div>
+            <label class="form-label">Rua</label>
+            <input class="form-control" #rua_imov type="text" id="rua_imov" value="" name="nome"/> 
+        </div>
+        <div>
+            <label class="form-label">Número</label>
+            <input class="form-control" #numero_imov type="text" id="numero_imov" value="" name="nome"/> 
+        </div>
+        <div>
+            <label class="form-label">Apto</label>
+            <input class="form-control" #apto_imov type="text" id="apto_imov" value="" name="nome"/> 
+        </div>
+        <div>
+            <label class="form-label">Bloco</label>
+            <input class="form-control" #bloco_imov type="text" id="bloco_imov" value="" name="nome"/> 
+        </div>
+        <div>
+            <label class="form-label">Bairro</label>
+            <input class="form-control" #bairro_imov type="text" id="bairro_imov" value="" name="nome"/> 
+        </div>
+        <div>
+            <label class="form-label">CEP</label>
+            <input class="form-control" #cep_imov type="text" id="cep_imov" value="" name="nome"/> 
+        </div>
+        <div>
+            <label class="form-label">Cidade</label>
+            <input class="form-control" #cidade_imov type="text" id="cidade_imov" value="" name="nome"/> 
+        </div>
+        <div>
+            <label class="form-label">UF</label>
+            <input class="form-control" #uf_imov type="text" id="uf_imov" value="" name="nome"/> 
+        </div> 
+    </div> 
+    <div class="d-flex flex-row mt-2">
+        <input class="btn btn-primary m-2" type="button" (click)="insereNovoEnderecoImovel(id_endereco_imov.value, rua_imov.value, numero_imov.value, apto_imov.value, bloco_imov.value, bairro_imov.value, cep_imov.value, cidade_imov.value, uf_imov.value)"value="Inserir">
+        <input class="btn btn-primary m-2" type="button" routerLink="/adress_immobile" value="Voltar">
+    </div>   
+</div>

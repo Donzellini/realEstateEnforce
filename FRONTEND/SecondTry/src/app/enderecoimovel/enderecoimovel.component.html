@@ -2,10 +2,12 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
 <div class="container" style="width:100vw">
-    <div class="d-flex flex-row mb-3">
+    
+      <div class="d-flex flex-row mb-3">
           <div class="p-2"><button type="button" class="btn btn-primary" href="#">HOME</button></div>
           <div class="p-2"><button type="button" class="btn btn-primary" routerLink="/enderecoimovelcadastro">NOVO</button></div>
-    </div>
+      </div>
+
       <table class="table">
             <thead>
                   <tr>
@@ -22,15 +24,15 @@
             </thead>
             <tbody>
                   <tr *ngFor="let endereco_imovel of adressesimmobiles">
-                        <th scope="row">{{ endereco_imovel.id_endereco_imovel }}</th>
-                        <td scope="row">{{ endereco_imovel.rua_imovel }}</td>
-                        <td scope="row">{{ endereco_imovel.numero_imovel }}</td>
-                        <td scope="row">{{ endereco_imovel.apto_imovel }}</td>
-                        <td scope="row">{{ endereco_imovel.bloco_imovel }}</td>
-                        <td scope="row">{{ endereco_imovel.bairro_imovel }}</td>
-                        <td scope="row">{{ endereco_imovel.cep_imovel }}</td>
-                        <td scope="row">{{ endereco_imovel.cidade_imovel }}</td>
-                        <td scope="row">{{ endereco_imovel.uf_imovel }}</td>
+                        <th scope="row">{{ endereco_imovel.id_endereco_imov }}</th>
+                        <td scope="row">{{ endereco_imovel.rua_imov }}</td>
+                        <td scope="row">{{ endereco_imovel.numero_imov }}</td>
+                        <td scope="row">{{ endereco_imovel.apto_imov }}</td>
+                        <td scope="row">{{ endereco_imovel.bloco_imov }}</td>
+                        <td scope="row">{{ endereco_imovel.bairro_imov }}</td>
+                        <td scope="row">{{ endereco_imovel.cep_imov }}</td>
+                        <td scope="row">{{ endereco_imovel.cidade_imov }}</td>
+                        <td scope="row">{{ endereco_imovel.uf_imov }}</td>
                   </tr>             
             </tbody> 
       </table>

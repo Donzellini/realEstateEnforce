@@ -1,7 +1,7 @@
-from app import db
+from ..app import db
 from sqlalchemy import ForeignKey
-from Client import client
-from Banks import banks
+from .Client import client
+from .Banks import banks
 
 class finance(db.Model):
     __tablename__ = 'financiamento'

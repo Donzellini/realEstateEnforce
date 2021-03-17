@@ -17,51 +17,19 @@ name_space = app.namespace('api', description='Main APIs')
 
 db = SQLAlchemy(flask_app)
 
+from .classes.Owner import owner
+from .classes.AddressImmobile import adress_immobile
+from .classes.AddressClient import adress_client
+from .classes.Client import client
+from .classes.Seller import seller
+from .classes.Banks import banks
+from .classes.Financing import finance
+from .classes.PaymentType import payment_type
+from .classes.Payment import payment
+from .classes.ImmobileType import immobile_type
+from .classes.Immobile import immobile
 
-from Owner import owner
-from AddressImmobile import adress_immobile
-from AddressClient import adress_client
-from Client import client
-from Seller import seller
-from Banks import banks
-from Financing import finance
-from PaymentType import payment_type
-from Payment import payment
-from ImmobileType import immobile_type
-from Immobile import immobile
-
-modelOwner = app.model('Proprietário',
-                       {'id_owner': fields.Integer(required = True,
-                                               description = "ID do Proprietário",
-                                               help = "ID não pode estar vazia."),
-                       'name_owner': fields.String(required = True,
-                                                description = "Nome do Proprietário",
-                                                help = "Nome não pode estar vazio."),
-                       'rg_owner': fields.String(required = True,
-                                               description = "Nome do Proprietário",
-                                               help = "ID não pode estar vazia."),
-                       'cpf_owner': fields.String(required = True,
-                                                description = "Nome do Proprietário",
-                                                help = "ID não pode estar vazia."),
-                       'birth_date_owner': fields.String(required = True,
-                                               description = "Nome do Proprietário",
-                                               help = "ID não pode estar vazia."),
-                       'civil_status_owner': fields.String(required = True,
-                                               description = "Nome do Proprietário",
-                                               help = "ID não pode estar vazia."),
-                       'email_owner': fields.String(required = True,
-                                               description = "Nome do Proprietário",
-                                               help = "ID não pode estar vazia."),
-                       'cel_owner': fields.String(required = True,
-                                               description = "Nome do Proprietário",
-                                               help = "ID não pode estar vazia."),
-                       'prof_owner': fields.String(required = True,
-                                               description = "Nome do Proprietário",
-                                               help = "ID não pode estar vazia."),
-                       'tempo_prop': fields.String(required = True,
-                                               description = "Nome do Proprietário",
-                                               help = "ID não pode estar vazia.")})
-
+from .models.models import modelOwner, modelAdressImmobile, modelAdressClient, modelBanco, modelFinancing, modelSeller, modelClient, modelPayment, modelPaymentType, modelImmobileType, modelImmobile
 
 @name_space.route('/owners')
 class gpOwners(Resource):
@@ -123,35 +91,6 @@ class gpOwners(Resource):
         except Exception as e:
             name_space.abort(400, e.__doc__, status = "Could not save information", statusCode = "400")
 
-modelAdressImmobile = app.model('Endereço do Imóvel',
-                                {'id_endereco_imov': fields.Integer(required = True,
-                                               description = "ID do Proprietário",
-                                               help = "ID não pode estar vazia."),
-                                'rua_imov': fields.String(required = True,
-                                                description = "Nome do Proprietário",
-                                                help = "Nome não pode estar vazio."),
-                                'numero_imov': fields.String(required = True,
-                                               description = "Nome do Proprietário",
-                                               help = "ID não pode estar vazia."),
-                                'apto_imov': fields.String(required = True,
-                                                description = "Nome do Proprietário",
-                                                help = "ID não pode estar vazia."),
-                                'bloco_imov': fields.String(required = True,
-                                               description = "Nome do Proprietário",
-                                               help = "ID não pode estar vazia."),
-                                'bairro_imov': fields.String(required = True,
-                                               description = "Nome do Proprietário",
-                                               help = "ID não pode estar vazia."),
-                                'cep_imov': fields.String(required = True,
-                                               description = "Nome do Proprietário",
-                                               help = "ID não pode estar vazia."),
-                                'cidade_imov': fields.String(required = True,
-                                               description = "Nome do Proprietário",
-                                               help = "ID não pode estar vazia."),
-                                'uf_imov': fields.String(required = True,
-                                               description = "Nome do Proprietário",
-                                               help = "ID não pode estar vazia.")})
-
 @name_space.route('/adress_immobile')
 class gpAdressImmobile(Resource):
     
@@ -209,35 +148,6 @@ class gpAdressImmobile(Resource):
         except Exception as e:
             name_space.abort(400, e.__doc__, status = "Could not save information", statusCode = "400")
 
-modelAdressClient = app.model('Endereço do Cliente',
-                                {'id_endereco_cli': fields.Integer(required = True,
-                                               description = "ID do Proprietário",
-                                               help = "ID não pode estar vazia."),
-                                'rua_cli': fields.String(required = True,
-                                                description = "Nome do Proprietário",
-                                                help = "Nome não pode estar vazio."),
-                                'numero_cli': fields.String(required = True,
-                                               description = "Nome do Proprietário",
-                                               help = "ID não pode estar vazia."),
-                                'apto_cli': fields.String(required = True,
-                                                description = "Nome do Proprietário",
-                                                help = "ID não pode estar vazia."),
-                                'bloco_cli': fields.String(required = True,
-                                               description = "Nome do Proprietário",
-                                               help = "ID não pode estar vazia."),
-                                'bairro_cli': fields.String(required = True,
-                                               description = "Nome do Proprietário",
-                                               help = "ID não pode estar vazia."),
-                                'cep_cli': fields.String(required = True,
-                                               description = "Nome do Proprietário",
-                                               help = "ID não pode estar vazia."),
-                                'cidade_cli': fields.String(required = True,
-                                               description = "Nome do Proprietário",
-                                               help = "ID não pode estar vazia."),
-                                'uf_cli': fields.String(required = True,
-                                               description = "Nome do Proprietário",
-                                               help = "ID não pode estar vazia.")})
-
 @name_space.route('/adress_client')
 class gpAdressClient(Resource):
     
@@ -294,38 +204,6 @@ class gpAdressClient(Resource):
             name_space.abort(500, e.__doc__, status = "Could not save information", statusCode = "500")
         except Exception as e:
             name_space.abort(400, e.__doc__, status = "Could not save information", statusCode = "400")
-
-modelClient = app.model('Cliente',
-                       {'id_cli': fields.Integer(required = True,
-                                               description = "ID do Proprietário",
-                                               help = "ID não pode estar vazia."),
-                       'name_cli': fields.String(required = True,
-                                                description = "Nome do Proprietário",
-                                                help = "Nome não pode estar vazio."),
-                       'rg_cli': fields.String(required = True,
-                                               description = "Nome do Proprietário",
-                                               help = "ID não pode estar vazia."),
-                       'cpf_cli': fields.String(required = True,
-                                                description = "Nome do Proprietário",
-                                                help = "ID não pode estar vazia."),
-                       'birth_date_cli': fields.String(required = True,
-                                               description = "Nome do Proprietário",
-                                               help = "ID não pode estar vazia."),
-                       'civil_status_cli': fields.String(required = True,
-                                               description = "Nome do Proprietário",
-                                               help = "ID não pode estar vazia."),
-                       'email_cli': fields.String(required = True,
-                                               description = "Nome do Proprietário",
-                                               help = "ID não pode estar vazia."),
-                       'cel_cli': fields.String(required = True,
-                                               description = "Nome do Proprietário",
-                                               help = "ID não pode estar vazia."),
-                       'id_endereco_cli': fields.Integer(required = True,
-                                               description = "Nome do Proprietário",
-                                               help = "ID não pode estar vazia."),
-                       'prof_cli': fields.String(required = True,
-                                               description = "Nome do Proprietário",
-                                               help = "ID não pode estar vazia.")})
 
 @name_space.route('/clients')
 class gpClient(Resource):
@@ -386,24 +264,6 @@ class gpClient(Resource):
         except Exception as e:
             name_space.abort(400, e.__doc__, status = "Could not save information", statusCode = "400")
 
-modelSeller = app.model('Vendedor',
-                       {'id_vendedor': fields.Integer(required = True,
-                                               description = "ID do Proprietário",
-                                               help = "ID não pode estar vazia."),
-                       'name_vendedor': fields.String(required = True,
-                                                description = "Nome do Proprietário",
-                                                help = "Nome não pode estar vazio."),
-                       'matricula_vendedor': fields.String(required = True,
-                                               description = "Nome do Proprietário",
-                                               help = "ID não pode estar vazia."),
-                       'email_vendedor': fields.String(required = True,
-                                                description = "Nome do Proprietário",
-                                                help = "ID não pode estar vazia."),
-                       'telefone_vendedor': fields.String(required = True,
-                                               description = "Nome do Proprietário",
-                                               help = "ID não pode estar vazia.")})
-
-
 @name_space.route('/sellers')
 class gpSellers(Resource):
     
@@ -452,14 +312,6 @@ class gpSellers(Resource):
             name_space.abort(500, e.__doc__, status = "Could not save information", statusCode = "500")
         except Exception as e:
             name_space.abort(400, e.__doc__, status = "Could not save information", statusCode = "400")
-
-modelBanco = app.model('Bancos',
-                    {'id_banco': fields.Integer(required = True,
-                                               description = "ID do Banco",
-                                               help = "ID não pode estar vazia."),
-                    'name_banco': fields.String(required = True,
-                                                description = "Nome do Banco",
-                                                help = "Nome não pode estar vazio.")}) 
 
 @name_space.route('/bancos')
 class gpBanks(Resource):
@@ -513,23 +365,6 @@ class gpBanks(Resource):
         except Exception as e:
             name_space.abort(400, e.__doc__, status = "Could not save information", statusCode = "400")
 
-modelFinancing = app.model('Financiamento',
-                    {'id_financiamento': fields.Integer(required = True,
-                                               description = "ID do Banco",
-                                               help = "ID não pode estar vazia."),
-                    'id_cli': fields.Integer(required = True,
-                                                description = "Nome do Banco",
-                                                help = "Nome não pode estar vazio."),
-                    'id_banco': fields.Integer(required = True,
-                                                description = "Nome do Banco",
-                                                help = "Nome não pode estar vazio."),
-                    'entrada': fields.String(required = True,
-                                                description = "Nome do Banco",
-                                                help = "Nome não pode estar vazio."),
-                    'num_parcela': fields.Integer(required = True,
-                                                description = "Nome do Banco",
-                                                help = "Nome não pode estar vazio.")}) 
-
 @name_space.route('/financing')
 class gpFinancing(Resource):
     
@@ -577,18 +412,7 @@ class gpFinancing(Resource):
         except KeyError as e:
             name_space.abort(500, e.__doc__, status = "Could not save information", statusCode = "500")
         except Exception as e:
-            name_space.abort(400, e.__doc__, status = "Could not save information", statusCode = "400")
-
-modelPaymentType = app.model('Meios de Pagamento',
-                    {'id_tipo_compra': fields.Integer(required = True,
-                                               description = "ID do Banco",
-                                               help = "ID não pode estar vazia."),
-                    'vista': fields.Boolean(required = True,
-                                                description = "Nome do Banco",
-                                                help = "Nome não pode estar vazio."),
-                    'id_financiamento': fields.Integer(required = True,
-                                                description = "Nome do Banco",
-                                                help = "Nome não pode estar vazio.")}) 
+            name_space.abort(400, e.__doc__, status = "Could not save information", statusCode = "400") 
 
 @name_space.route('/paymentType')
 class gpPaymentType(Resource):
@@ -633,24 +457,7 @@ class gpPaymentType(Resource):
         except KeyError as e:
             name_space.abort(500, e.__doc__, status = "Could not save information", statusCode = "500")
         except Exception as e:
-            name_space.abort(400, e.__doc__, status = "Could not save information", statusCode = "400")
-
-modelPayment = app.model('Compra',
-                    {'id_compra': fields.Integer(required = True,
-                                               description = "ID do Banco",
-                                               help = "ID não pode estar vazia."),
-                    'id_vendedor': fields.Integer(required = True,
-                                                description = "Nome do Banco",
-                                                help = "Nome não pode estar vazio."),
-                    'id_cli': fields.Integer(required = True,
-                                                description = "Nome do Banco",
-                                                help = "Nome não pode estar vazio."),
-                    'valor_compra': fields.String(required = True,
-                                                description = "Nome do Banco",
-                                                help = "Nome não pode estar vazio."),
-                    'id_tipo_compra': fields.Integer(required = True,
-                                                description = "Nome do Banco",
-                                                help = "Nome não pode estar vazio.")}) 
+            name_space.abort(400, e.__doc__, status = "Could not save information", statusCode = "400") 
 
 @name_space.route('/payment')
 class gpPayment(Resource):
@@ -699,15 +506,7 @@ class gpPayment(Resource):
         except KeyError as e:
             name_space.abort(500, e.__doc__, status = "Could not save information", statusCode = "500")
         except Exception as e:
-            name_space.abort(400, e.__doc__, status = "Could not save information", statusCode = "400")
-
-modelImmobileType = app.model('Tipos de Imóvel',
-                    {'id_tipo_imovel': fields.Integer(required = True,
-                                               description = "ID do Banco",
-                                               help = "ID não pode estar vazia."),
-                    'tipo_imovel': fields.String(required = True,
-                                                description = "Nome do Banco",
-                                                help = "Nome não pode estar vazio.")}) 
+            name_space.abort(400, e.__doc__, status = "Could not save information", statusCode = "400") 
 
 @name_space.route('/immobileTypes')
 class gpImmobileType(Resource):
@@ -751,26 +550,6 @@ class gpImmobileType(Resource):
             name_space.abort(500, e.__doc__, status = "Could not save information", statusCode = "500")
         except Exception as e:
             name_space.abort(400, e.__doc__, status = "Could not save information", statusCode = "400")
-
-modelImmobile = app.model('Imóveis',
-                    {'id_imovel': fields.Integer(required = True,
-                                               description = "ID do Banco",
-                                               help = "ID não pode estar vazia."),
-                    'id_endereco_imov': fields.Integer(required = True,
-                                                description = "Nome do Banco",
-                                                help = "Nome não pode estar vazio."),
-                    'id_owner': fields.Integer(required = True,
-                                                description = "Nome do Banco",
-                                                help = "Nome não pode estar vazio."),
-                    'id_vendedor': fields.Integer(required = True,
-                                                description = "Nome do Banco",
-                                                help = "Nome não pode estar vazio."),
-                    'id_tipo_imovel': fields.Integer(required = True,
-                                                description = "Nome do Banco",
-                                                help = "Nome não pode estar vazio."),
-                    'id_compra': fields.Integer(required = True,
-                                                description = "Nome do Banco",
-                                                help = "Nome não pode estar vazio.")}) 
 
 @name_space.route('/immobile')
 class gpImmobile(Resource):

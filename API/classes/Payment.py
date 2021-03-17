@@ -1,8 +1,8 @@
-from app import db
+from ..app import db
 from sqlalchemy import ForeignKey
-from Seller import seller
-from Client import client
-from PaymentType import payment_type
+from .Seller import seller
+from .Client import client
+from .PaymentType import payment_type
 
 class payment(db.Model):
     __tablename__ = 'compra'

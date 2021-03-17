@@ -1,1 +1,53 @@
-<p>proprietariocadastro works!</p>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+<div class="container" style="width:100vw">
+    <h2 class="text-center display-3">Cadastrar Novo Proprietário</h2>
+
+    <div class="row">
+        <div>
+            <label class="form-label">ID Proprietario</label>
+            <input class="form-control" #id_owner type="text" id="idbanco" value=""/>
+        </div>
+        <div>
+            <label class="form-label">Nome</label>
+            <input class="form-control" #name_owner type="text" id="nomebanco" value="" name="nome"/> 
+        </div>
+        <div>
+            <label class="form-label">RG</label>
+            <input class="form-control" #rg_owner type="text" id="nomebanco" value="" name="nome"/> 
+        </div>
+        <div>
+            <label class="form-label">CPF</label>
+            <input class="form-control" #cpf_owner type="text" id="nomebanco" value="" name="nome"/> 
+        </div>
+        <div>
+            <label class="form-label">Data de Nascimento</label>
+            <input class="form-control" #birth_date_owner type="text" id="nomebanco" value="" name="nome"/> 
+        </div>
+        <div>
+            <label class="form-label">Estado Civil</label>
+            <input class="form-control" #civil_status_owner type="text" id="nomebanco" value="" name="nome"/> 
+        </div>
+        <div>
+            <label class="form-label">Email</label>
+            <input class="form-control" #email_owner type="text" id="nomebanco" value="" name="nome"/> 
+        </div>
+        <div>
+            <label class="form-label">Telefone</label>
+            <input class="form-control" #cel_owner type="text" id="nomebanco" value="" name="nome"/> 
+        </div>
+        <div>
+            <label class="form-label">Profissão</label>
+            <input class="form-control" #prof_owner type="text" id="nomebanco" value="" name="nome"/> 
+        </div>
+        <div>
+            <label class="form-label">Tempo de Propriedade</label>
+            <input class="form-control" #tempo_prop type="text" id="nomebanco" value="" name="nome"/> 
+        </div> 
+    </div> 
+    <div class="d-flex flex-row mt-2">
+        <input class="btn btn-primary m-2" type="button" (click)="insereNovoProprietario(id_owner.value, name_owner.value, rg_owner.value, cpf_owner.value, birth_date_owner.value, civil_status_owner.value, email_owner.value, cel_owner.value, prof_owner.value, tempo_prop.value)" value="Inserir">
+        <input class="btn btn-primary m-2" type="button" routerLink="/owners" value="Voltar">
+    </div>   
+</div>
+

@@ -1,7 +1,7 @@
-from app import db
+from ..app import db
 from sqlalchemy import ForeignKey, Integer 
 from flask_sqlalchemy import SQLAlchemy
-from AddressClient import adress_client
+from .AddressClient import adress_client
 from sqlalchemy.orm import sessionmaker, relationship
 
 class client(db.Model):
