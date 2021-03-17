@@ -1,99 +1,62 @@
-# Título do projeto
+# Real Estate Enforce
 
-Um parágrafo da descrição do projeto vai aqui
+Projeto final da Trilha Python, organizada pelo Campinas Tech Talents e patrocinada pela Enforce.
 
-## 🚀 Começando
+## 🚀 Do que se trata?
 
-Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
+É um modelo MVP0 de um sistema de cadastros para uma imobiliária.
 
-Consulte **Implantação** para saber como implantar o projeto.
+### 📋 Ferramentas e Linguagens de Desenvolvimento utlizadas
 
-### 📋 Pré-requisitos
+- Banco de dados estruturado em PostgreSQL;
 
-De que coisas você precisa para instalar o software e como instalá-lo?
+- Flask / Swagger para geração de APIs;
 
-```
-Dar exemplos
-```
+- Angular para o desenvolvimento Front-End.
 
-### 🔧 Instalação
+### 🔧 Testando
 
-Uma série de exemplos passo-a-passo que informam o que você deve executar para ter um ambiente de desenvolvimento em execução.
+Configurar em sua máquina:
+- Angular CLI 9;
+- Node.js;
+- Python 3.9.2;
+- Criar um ambiente virtual em sua plataforma preferida;
+- Exceutar o comando "pip install -r requirements.txt";
+- Banco de Dados no Postgres seguindo a db.string em app.py
 
-Diga como essa etapa será:
+## ⚙️ Features
 
-```
-Dar exemplos
-```
+- Métodos POST e GET configurados para todas as tabelas;
+- Tabelas completamentamente listadas no Front-End;
+- Testes positivos com swagger;
 
-E repita:
+![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
 
-```
-Até finalizar
-```
+## ⚙️ Known Issues
 
-Termine com um exemplo de como obter dados do sistema ou como usá-los para uma pequena demonstração.
-
-## ⚙️ Executando os testes
-
-Explicar como executar os testes automatizados para este sistema.
-
-### 🔩 Analise os testes de ponta a ponta
-
-Explique que eles verificam esses testes e porquê.
-
-```
-Dar exemplos
-```
-
-### ⌨️ E testes de estilo de codificação
-
-Explique que eles verificam esses testes e porquê.
-
-```
-Dar exemplos
-```
-
-## 📦 Desenvolvimento
-
-Adicione notas adicionais sobre como implantar isso em um sistema ativo
+- Sistema CRUD não implementado completamente no Back-End;
+- As tabelas deveriam ser convertidas para objetos, dessa forma eu poderia ter as trabalhado como variáveis;
+- A cláusula returning() não foi implementada por conta do tópico anterior;
+- Não é captado o ID gerado para cada tabela;
+- Sistema CRUD não implementado no FrontEnd;
+- Por conta do problema com a clásula returning(), em algumas tabelas no Front-End não é possível realizar o método POST.
 
 ## 🛠️ Construído com
 
 Mencione as ferramentas que você usou para criar seu projeto
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - O framework web usado
-* [Maven](https://maven.apache.org/) - Gerente de Dependência
-* [ROME](https://rometools.github.io/rome/) - Usada para gerar RSS
-
-## 🖇️ Colaborando
-
-Por favor, leia o [COLABORACAO.md](https://gist.github.com/usuario/linkParaInfoSobreContribuicoes) para obter detalhes sobre o nosso código de conduta e o processo para nos enviar pedidos de solicitação.
-
-## 📌 Versão
-
-Nós usamos [SemVer](http://semver.org/) para controle de versão. Para as versões disponíveis, observe as [tags neste repositório](https://github.com/suas/tags/do/projeto). 
+* [Angular](https://angular.io/) - O framework web usado
+* [Bootstrap](https://getbootstrap.com/) - O framework de estilos usado
+* [SQLAlchemy](https://www.sqlalchemy.org/) - Estruturação do banco de dados
+* [Flask](https://flask.palletsprojects.com/en/1.1.x/) - Usada para gerar os microsserviços
+* [Postgres](https://www.postgresql.org/) - Armazenamento dos dados
 
 ## ✒️ Autores
 
-Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
-
-* **Um desenvolvedor** - *Trabalho Inicial* - [umdesenvolvedor](https://github.com/linkParaPerfil)
-* **Fulano De Tal** - *Documentação* - [fulanodetal](https://github.com/linkParaPerfil)
-
-Você também pode ver a lista de todos os [colaboradores](https://github.com/usuario/projeto/colaboradores) que participaram deste projeto.
-
-## 📄 Licença
-
-Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE.md](https://github.com/usuario/projeto/licenca) para detalhes.
+* **Muriel Donzellini** - *Responsável por estruturar o banco de dados no Postgres, codificar o backend e desenvolver o Front-End* - [Acesse meu perfil!](https://github.com/Donzellini)
 
 ## 🎁 Expressões de gratidão
 
-* Conte a outras pessoas sobre este projeto 📢
-* Convide alguém da equipe para uma cerveja 🍺 
-* Obrigado publicamente 🤓.
-* etc.
-
-
----
-⌨️ com ❤️ por [Armstrong Lohãns](https://gist.github.com/lohhans) 😊
+* Agradeço a todo o apoio da turma da Trilha Python! Que galera empenhada!
+* Agradeço a equipe do Campinas Tech Talents por terem me aceito no programa!
+* E por fim, agradeço principalmente ao Professor Jeferson Leal, você tornou tudo isso possível!
