@@ -18,7 +18,6 @@ import { FinancingcadastroComponent } from './financingcadastro/financingcadastr
 import { ImovelComponent } from './imovel/imovel.component';
 import { ImovelcadastroComponent } from './imovelcadastro/imovelcadastro.component';
 import { ImoveltipoComponent } from './imoveltipo/imoveltipo.component';
-import { ImoveltipocadastroComponent } from './imoveltipocadastro/imoveltipocadastro.component';
 import { ProprietarioComponent } from './proprietario/proprietario.component';
 import { ProprietariocadastroComponent } from './proprietariocadastro/proprietariocadastro.component';
 import { CompraComponent } from './compra/compra.component';
@@ -42,9 +41,7 @@ import { VendedorcadastroComponent } from './vendedorcadastro/vendedorcadastro.c
     FinancingComponent,
     FinancingcadastroComponent,
     ImovelComponent,
-    ImovelcadastroComponent,
     ImoveltipoComponent,
-    ImoveltipocadastroComponent,
     ProprietarioComponent,
     ProprietariocadastroComponent,
     CompraComponent,

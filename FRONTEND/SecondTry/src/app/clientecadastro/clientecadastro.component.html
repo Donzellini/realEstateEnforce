@@ -1,1 +1,52 @@
-<p>clientecadastro works!</p>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+<div class="container" style="width:100vw">
+    <h2 class="text-center display-3">Cadastrar Novo Cliente</h2>
+
+    <div class="row">
+        <div>
+            <label class="form-label">ID Cliente</label>
+            <input class="form-control" #id_cli type="text" id="idbanco" value=""/>
+        </div>
+        <div>
+            <label class="form-label">Nome</label>
+            <input class="form-control" #name_cli type="text" id="nomebanco" value="" name="nome"/> 
+        </div>
+        <div>
+            <label class="form-label">RG</label>
+            <input class="form-control" #rg_cli type="text" id="nomebanco" value="" name="nome"/> 
+        </div>
+        <div>
+            <label class="form-label">CPF</label>
+            <input class="form-control" #cpf_cli type="text" id="nomebanco" value="" name="nome"/> 
+        </div>
+        <div>
+            <label class="form-label">Data de Nascimento</label>
+            <input class="form-control" #birth_date_cli type="text" id="nomebanco" value="" name="nome"/> 
+        </div>
+        <div>
+            <label class="form-label">Estado Civil</label>
+            <input class="form-control" #civil_status_cli type="text" id="nomebanco" value="" name="nome"/> 
+        </div>
+        <div>
+            <label class="form-label">Email</label>
+            <input class="form-control" #email_cli type="text" id="nomebanco" value="" name="nome"/> 
+        </div>
+        <div>
+            <label class="form-label">Telefone</label>
+            <input class="form-control" #cel_cli type="text" id="nomebanco" value="" name="nome"/> 
+        </div>
+        <div>
+            <label class="form-label">Endereço</label>
+            <input class="form-control" #id_endereco_cli type="text" id="nomebanco" value="" name="nome"/> 
+        </div>
+        <div>
+            <label class="form-label">Profissão</label>
+            <input class="form-control" #prof_cli type="text" id="nomebanco" value="" name="nome"/> 
+        </div> 
+    </div> 
+    <div class="d-flex flex-row mt-2">
+        <input class="btn btn-primary m-2" type="button" (click)="insereNovoCliente(id_cli.value, name_cli.value, rg_cli.value, cpf_cli.value, birth_date_cli.value, civil_status_cli.value, email_cli.value, cel_cli.value, id_endereco_cli.value, prof_cli.value)" value="Inserir">
+        <input class="btn btn-primary m-2" type="button" routerLink="/clients" value="Voltar">
+    </div>   
+</div>

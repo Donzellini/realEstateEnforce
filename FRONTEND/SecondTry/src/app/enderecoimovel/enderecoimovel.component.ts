@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-enderecoimovel',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./enderecoimovel.component.scss']
 })
 export class EnderecoimovelComponent implements OnInit {
+  adressesimmobiles:any;
 
-  constructor() { }
+  constructor(private apiService: ApiService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.apiService.getAdressImmobile().subscribe((data)=>{
+      console.log(data);
+      this.adressesimmobiles = data;
+      console.log(this.adressesimmobiles[0])
+    })
   }
 
 }
