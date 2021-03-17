@@ -29,8 +29,9 @@ Configurar em sua máquina:
 - Métodos POST e GET configurados para todas as tabelas;
 - Tabelas completamentamente listadas no Front-End;
 - Testes positivos com swagger;
+- Persistência de dados no Postgres;
 
-![Alt Text](https://i.imgur.com/e1qQ7XH.mp4)
+![Alt Text](https://gph.is/g/4oXw5vL)
 
 ## ⚙️ Known Issues
 
