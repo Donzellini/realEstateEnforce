@@ -1,21 +1,23 @@
 <!-- CSS only -->
-<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
-<h2>Novo Banco</h2>
+<div class="container" style="width:100vw">
+    <h2 class="text-center display-3">Cadastrar Novo Banco</h2>
 
-<div>
-   <br>
-    <label>ID Banco</label>
-    <input #id_banco type="text" id="nome" value="" name="nome"/>
-    <label>Nome do Banco</label>
-    <input #name_banco type="text" id="nome" value="" name="nome"/> <br><br>
-    <br><br>
+    <div class="row">
+        <div class="col">
+            <label class="form-label">ID Banco</label>
+            <input class="form-control" #id_banco type="text" id="idbanco" value="" name="nome"/>
+        </div>
+        <div class="col">
+            <label class="form-label">Nome do Banco</label>
+            <input class="form-control" #name_banco type="text" id="nomebanco" value="" name="nome"/> 
+        </div>
+    </div> 
+    <div class="d-flex flex-row mt-2">
+        <input class="btn btn-primary m-2" type="button" (click)="insereNovoBanco(id_banco.value, name_banco.value)" value="Inserir">
+        <input class="btn btn-primary m-2" type="button" routerLink="/bancos" value="Voltar">
+    </div>   
 </div>
 
-<br><br>
-
-<div style="width: 125px;">
-  <input type="button" (click)="insereNovoBanco(id_banco.value, name_banco.value)" value="Inserir"> &nbsp;|&nbsp; <input type="button" routerLink="/bancos" value="Voltar">
-</div>
-
-<br>
+ 
