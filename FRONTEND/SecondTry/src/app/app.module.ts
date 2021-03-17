@@ -6,11 +6,15 @@ import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { BancosComponent } from './bancos/bancos.component';
+import { BancocadastroComponent } from './bancocadastro/bancocadastro.component';
+import { EnderecoclienteComponent } from './enderecocliente/enderecocliente.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BancosComponent
+    BancosComponent,
+    BancocadastroComponent,
+    EnderecoclienteComponent
   ],
   imports: [
     BrowserModule,

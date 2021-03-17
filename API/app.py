@@ -807,12 +807,12 @@ class gpImmobile(Resource):
 
         try:
             immobileData = request.get_json()
-            bank = banks(id_imovel=immobileData['id_imovel'], 
-                         id_endereco_imov=immobileData['id_endereco_imov'],
-                         id_owner=immobileData['id_owner'],
-                         id_vendedor=immobileData['id_vendedor'],
-                         id_tipo_imovel=immobileData['id_tipo_imovel'],
-                         id_compra=immobileData['id_compra'])
+            immobiles = immobile(id_imovel=immobileData['id_imovel'], 
+                                 id_endereco_imov=immobileData['id_endereco_imov'],
+                                 id_owner=immobileData['id_owner'],
+                                 id_vendedor=immobileData['id_vendedor'],
+                                 id_tipo_imovel=immobileData['id_tipo_imovel'],
+                                 id_compra=immobileData['id_compra'])
             db.session.add(immobileList)
             db.session.commit()
         

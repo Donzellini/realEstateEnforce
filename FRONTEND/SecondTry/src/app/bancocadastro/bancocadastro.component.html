@@ -1,0 +1,21 @@
+<!-- CSS only -->
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> -->
+
+<h2>Novo Banco</h2>
+
+<div>
+   <br>
+    <label>ID Banco</label>
+    <input #id_banco type="text" id="nome" value="" name="nome"/>
+    <label>Nome do Banco</label>
+    <input #name_banco type="text" id="nome" value="" name="nome"/> <br><br>
+    <br><br>
+</div>
+
+<br><br>
+
+<div style="width: 125px;">
+  <input type="button" (click)="insereNovoBanco(id_banco.value, name_banco.value)" value="Inserir"> &nbsp;|&nbsp; <input type="button" routerLink="/bancos" value="Voltar">
+</div>
+
+<br>
