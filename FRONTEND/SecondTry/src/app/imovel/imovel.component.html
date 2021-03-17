@@ -1,1 +1,32 @@
-<p>imovel works!</p>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+<div class="container" style="width:100vw">
+    <div class="d-flex flex-row mb-3">
+        <div class="p-2"><button type="button" class="btn btn-primary" routerLink="">HOME</button></div>
+        <div class="p-2"><button type="button" class="btn btn-primary" routerLink="/imovelcadastro">NOVO</button></div>
+    </div>  
+    
+    <table class="table">
+            <thead>
+                  <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Imóvel</th>
+                        <th scope="col">Endereço do Imóvel</th>
+                        <th scope="col">Proprietário</th>
+                        <th scope="col">Tipo do Imóvel</th>
+                        <th scope="col">Compra</th>
+                  </tr>                  
+            </thead>
+            <tbody>
+                  <tr *ngFor="let imovel of imoveis">
+                        <th scope="row">{{ imovel.id_imovel }}</th>
+                        <td scope="row">{{ imovel.id_endereco_imov }}</td>
+                        <td scope="row">{{ imovel.id_owner }}</td>
+                        <td scope="row">{{ imovel.id_vendedor }}</td>
+                        <td scope="row">{{ imovel.id_tipo_imovel }}</td>
+                        <td scope="row">{{ imovel.id_compra }}</td>
+                  </tr>             
+            </tbody> 
+      </table>
+</div>

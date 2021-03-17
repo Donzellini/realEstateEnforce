@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-imovel',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./imovel.component.scss']
 })
 export class ImovelComponent implements OnInit {
+  imoveis:any;
 
-  constructor() { }
+  constructor(private apiService: ApiService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.apiService.getImmobile().subscribe((data)=>{
+      console.log(data);
+      this.imoveis = data;
+      console.log(this.imoveis[0])
+    })
   }
+  
 
 }

@@ -1,1 +1,37 @@
-<p>imovelcadastro works!</p>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+<div class="container" style="width:100vw">
+    <h2 class="text-center display-3">Cadastrar Novo Vendedor</h2>
+
+    <div class="row">
+        <div>
+            <label class="form-label">ID Imóvel</label>
+            <input class="form-control" #id_imovel type="text" id="idbanco" value=""/>
+        </div>
+        <div>
+            <label class="form-label">Endereço do Imóvel</label>
+            <input class="form-control" #id_endereco_imov type="text" id="nomebanco" value="" name="nome"/> 
+        </div>
+        <div>
+            <label class="form-label">Proprietário</label>
+            <input class="form-control" #id_owner type="text" id="nomebanco" value="" name="nome"/> 
+        </div>
+        <div>
+            <label class="form-label">Vendedor</label>
+            <input class="form-control" #id_vendedor type="text" id="nomebanco" value="" name="nome"/> 
+        </div>
+        <div>
+            <label class="form-label">Tipo do Imóvel</label>
+            <input class="form-control" #id_tipo_imovel type="text" id="nomebanco" value="" name="nome"/> 
+        </div>
+        <div>
+            <label class="form-label">Valor da Compra</label>
+            <input class="form-control" #id_compra type="text" id="nomebanco" value="" name="nome"/> 
+        </div>
+    </div> 
+    <div class="d-flex flex-row mt-2">
+        <input class="btn btn-primary m-2" type="button" (click)="insereNovoImovel(id_imovel.value, id_endereco_imov.value, id_owner.value, id_vendedor.value, id_tipo_imovel.value, id_compra.value)" value="Inserir">
+        <input class="btn btn-primary m-2" type="button" routerLink="/immobile" value="Voltar">
+    </div>   
+</div>
+

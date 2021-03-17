@@ -26,6 +26,7 @@ import { CompratipoComponent } from './compratipo/compratipo.component';
 import { CompratipocadastroComponent } from './compratipocadastro/compratipocadastro.component';
 import { VendedorComponent } from './vendedor/vendedor.component';
 import { VendedorcadastroComponent } from './vendedorcadastro/vendedorcadastro.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { VendedorcadastroComponent } from './vendedorcadastro/vendedorcadastro.c
     CompratipoComponent,
     CompratipocadastroComponent,
     VendedorComponent,
-    VendedorcadastroComponent
+    VendedorcadastroComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

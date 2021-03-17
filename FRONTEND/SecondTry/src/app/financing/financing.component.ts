@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-financing',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./financing.component.scss']
 })
 export class FinancingComponent implements OnInit {
+  financiamentos:any;
 
-  constructor() { }
+  constructor(private apiService: ApiService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.apiService.getFinancing().subscribe((data)=>{
+      console.log(data);
+      this.financiamentos = data;
+      console.log(this.financiamentos[0])
+    })
   }
+  
 
 }

@@ -16,8 +16,16 @@ import { CompraComponent } from './compra/compra.component';
 import { CompracadastroComponent } from './compracadastro/compracadastro.component';
 import { CompratipoComponent} from './compratipo/compratipo.component';
 import { CompratipocadastroComponent} from './compratipocadastro/compratipocadastro.component';
+import { FinancingComponent } from './financing/financing.component';
+import { FinancingcadastroComponent } from './financingcadastro/financingcadastro.component';
+import { ImoveltipoComponent } from './imoveltipo/imoveltipo.component';
+import { ImoveltipocadastroComponent} from './imoveltipocadastro/imoveltipocadastro.component';
+import { ImovelComponent } from './imovel/imovel.component';
+import { ImovelcadastroComponent } from './imovelcadastro/imovelcadastro.component';
+import { HomeComponent } from './home/home.component'
 
 const routes: Routes = [
+  {path: '', pathMatch: 'full', component: HomeComponent},
   {path:'bancos', component: BancosComponent},
   {path:'bancocadastro', component: BancocadastroComponent},
   {path:'adress_client', component: EnderecoclienteComponent},
@@ -33,7 +41,13 @@ const routes: Routes = [
   {path:'payment', component: CompraComponent},
   {path:'compracadastro', component: CompracadastroComponent},
   {path:'paymentType', component: CompratipoComponent},
-  {path:'tipocompracadastro', component: CompratipocadastroComponent}
+  {path:'tipocompracadastro', component: CompratipocadastroComponent},
+  {path:'financing', component: FinancingComponent},
+  {path:'financiamentocadastro', component: FinancingcadastroComponent},
+  {path: 'immobileTypes', component: ImoveltipoComponent},
+  {path: 'tipoimovelcadastro', component: ImoveltipocadastroComponent},
+  {path: 'immobile', component: ImovelComponent},
+  {path: 'imovelcadastro', component: ImovelcadastroComponent}
 ];
 
 @NgModule({
